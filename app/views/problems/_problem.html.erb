@@ -1,0 +1,14 @@
+<%= div_for problem, :class => problem.status.downcase do %>
+
+  <span>
+    <% if problem.url.blank? %>
+      <%= problem.name %>
+    <% else %>
+      <%= link_to problem.name, problem.url %>
+    <% end %>
+  </span>
+  
+  <div class="controls">
+    <%= link_to "Edit", edit_problem_path(problem) %> | <%= link_to "Delete", problem_path(problem), :method => :delete, :confirm => "Are you positive?" %>
+  </div>
+<% end %>

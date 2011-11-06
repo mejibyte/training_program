@@ -1,4 +1,8 @@
 TrainingProgram::Application.routes.draw do
+  resources :problems
+  resource :session
+  root :to => "problems#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

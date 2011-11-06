@@ -1,0 +1,27 @@
+.problem {
+    a {
+      color: black;
+      padding: 4px;
+      &:hover {
+        color: #fff;
+      };
+    }
+  
+  width: 400px;
+
+  .controls {
+    float: right;
+  }
+  
+  &.pending {
+    background: #eee;
+  }
+  
+  &.solved {
+    background: #0f3;
+  }
+  
+  &.tried {
+    background: #F75D59;
+  }
+}
