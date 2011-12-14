@@ -17,12 +17,16 @@
   </div>
   <div class="field">
     <%= f.label :status %><br />
-    <%= f.select :status, options_for_select(%w(Solved Pending Tried), @problem.status) %>
+    <%= f.select :status, options_for_select(%w(Pending Solved Tried), @problem.status) %>
   </div>
   <div class="field">
     <%= f.label :url %><br />
     <%= f.text_field :url %>
   </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>  
   <div class="actions">
     <%= f.submit %>
   </div>

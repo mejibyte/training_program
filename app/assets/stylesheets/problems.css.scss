@@ -1,6 +1,6 @@
 .problem {
     a {
-      color: black;
+      color: #00C;
       padding: 4px;
       &:hover {
         color: #fff;
@@ -14,14 +14,27 @@
   }
   
   &.pending {
-    background: #eee;
+    background: #F7F7F7;
   }
   
   &.solved {
-    background: #0f3;
+    background: #CFC;
+    border: 1px solid #6C6;
+    a { color: black; &:hover { color: white; } }
   }
   
   &.tried {
-    background: #F75D59;
+    background: #FCC;
+    border: 1px solid #C66;
+    a { color: black; &:hover { color: white; } }
   }
+  
+  .notes {
+    display: none;
+    padding-top: 10px;
+  }
+}
+
+.new {
+    margin-top: 14px;
 }

@@ -11,4 +11,12 @@
   <div class="controls">
     <%= link_to "Edit", edit_problem_path(problem) %> | <%= link_to "Delete", problem_path(problem), :method => :delete, :confirm => "Are you positive?" %>
   </div>
+  
+  <% if problem.notes.present? %>
+    <span>| <%= link_to "+ notes", "#", :class => "toggle_notes" %></span>
+    <div class="notes">
+      <b>Notes:</b> <%= auto_link problem.notes %>
+    </div>
+  <% end %>
+  
 <% end %>

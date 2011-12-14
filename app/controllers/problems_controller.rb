@@ -19,7 +19,7 @@ class ProblemsController < ApplicationController
   def create
     @problem = Problem.new(params[:problem])
     if @problem.save
-      redirect_to @problem, notice: 'Problem was successfully created.'
+      redirect_to new_problem_path, notice: 'Problem was successfully created.'
     else
       render action: "new"
     end
@@ -29,7 +29,7 @@ class ProblemsController < ApplicationController
     @problem = Problem.find(params[:id])
 
     if @problem.update_attributes(params[:problem])
-      redirect_to @problem, notice: 'Problem was successfully updated.'
+      redirect_to problems_path, notice: 'Problem was successfully updated.'
     else
       render action: "edit" 
     end
@@ -38,6 +38,6 @@ class ProblemsController < ApplicationController
   def destroy
     @problem = Problem.find(params[:id])
     @problem.destroy
-    redirect_to problems_url
+    redirect_to problems_url, notice: 'Problem was successfully deleted.'
   end
 end

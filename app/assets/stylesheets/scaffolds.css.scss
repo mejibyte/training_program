@@ -1,6 +1,6 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #006;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
@@ -76,4 +76,13 @@ div {
   border: 1px dashed black;
   padding: 10px;
   margin: 5px;
+}
+
+.main {
+    background-color: #eee;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 20px 20px;
+    border: 1px solid #ccc;
+    width: 530px;
 }

@@ -7,3 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+setTimeout(function() {
+  $("#flash_notice, #flash_error, #flash_alert").slideUp();
+}, 3000);
