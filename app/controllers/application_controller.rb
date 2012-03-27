@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
   end
   
   def require_user
-    redirect_to new_session_path, notice: "Please log in first" unless signed_in?
+    unless signed_in?
+      session[:return_to] = request.path
+      redirect_to new_session_path, notice: "Please log in first."
+    end
   end
 end
