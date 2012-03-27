@@ -14,7 +14,6 @@ class SessionsController < ApplicationController
   end
   
   def destroy
-    authorize! :destroy, :session
     session[:admin] = nil
     redirect_to root_url, :notice => "Bye bye, beautiful person! See you soon."
   end
