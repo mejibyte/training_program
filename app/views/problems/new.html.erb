@@ -1,6 +1,6 @@
 <h2>Recently added problems</h2>
 
-<%= render Problem.order("created_at desc").limit(3) %>
+<%= render Problem.unscoped.order("created_at desc, status asc").limit(3) %>
 
 <h1>New problem</h1>
 
